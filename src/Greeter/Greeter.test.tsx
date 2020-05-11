@@ -7,4 +7,10 @@ describe('Greeter', () => {
     render(<Greeter />)
     expect(screen.getByText('Hello World!')).toBeInTheDocument();
   });
+
+  it('should greet a given value', () => {
+    const valueToGreet = 'Mike';
+    render(<Greeter greetAt={valueToGreet} />)
+    expect(screen.getByText('Hello ' + valueToGreet + '!')).toBeInTheDocument();
+  });
 });
