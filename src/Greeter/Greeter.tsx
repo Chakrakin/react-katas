@@ -1,3 +1,9 @@
 import React from 'react';
 
-export const Greeter: React.FC = ({children}) => <div>Hello World!</div>
+interface IGreeter {
+  greetAt?: string
+}
+
+export const Greeter: React.FC<IGreeter> = ({greetAt, children}) => {
+  return <div>Hello {greetAt ? greetAt : 'World'}!</div>
+}
