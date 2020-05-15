@@ -9,8 +9,11 @@ describe('Greeter', () => {
   });
 
   it('should greet a given value', () => {
-    const valueToGreet = 'Mike';
-    render(<Greeter greetAt={valueToGreet} />)
-    expect(screen.getByText('Hello ' + valueToGreet + '!')).toBeInTheDocument();
+    const component = render(<Greeter greetAt="Mike" />)
+    expect(screen.getByText('Hello ' + 'Mike' + '!')).toBeInTheDocument();
+    component.rerender(<Greeter greetAt="Mobile Mike" />);
+    expect(screen.getByText('Hello ' + 'Mobile Mike' + '!')).toBeInTheDocument();
+    component.rerender(<Greeter greetAt="Scotty" />);
+    expect(screen.getByText('Hello ' + 'Scotty' + '!')).toBeInTheDocument();
   });
 });
