@@ -16,7 +16,7 @@ describe('TicButton', () => {
     });
   });
   // suggested step: 2
-  describe('interaction', () => {
+  xdescribe('interaction', () => {
     it('should set a given value as display value', () => {
       const button = render(<TicButton value="X" onClick={jest.fn()} />)
       screen.getByRole('button', {name: /X/i});
