@@ -18,7 +18,7 @@ const deuceGameFields = [
 ] as Array<GameField>;
 
 // suggested step: 7
-xdescribe('TicUtils', () => {
+describe('TicUtils', () => {
   it('should find the winning player given on the current gamefield', () => {
     playerOneWinningGameFields.map(gameField => expect(discoverWinner(gameField)).toBe(1));
     playerTwoWinningGameFields.map(gameField => expect(discoverWinner(gameField)).toBe(2));

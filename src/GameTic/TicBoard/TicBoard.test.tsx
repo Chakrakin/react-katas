@@ -6,7 +6,7 @@ import { testClickButtonOrder } from '../TicTestUtils';
 
 describe('GameTic', () => {
   // suggested step: 3
-  xdescribe('GameArea', () => {
+  describe('GameArea', () => {
     beforeEach(() => render(<TicBoard endGame={jest.fn()} />))
 
     it('should have a "Have fun!" headline', () => {
@@ -28,7 +28,7 @@ describe('GameTic', () => {
   });
 
   // suggested step: 4
-  xdescribe('Button interaction', () => {
+  describe('Button interaction', () => {
     beforeEach(() => render(<TicBoard endGame={jest.fn()}/>))
 
     it('should display which player is on the move', () => {
@@ -62,7 +62,7 @@ describe('GameTic', () => {
   });
 
   // suggested step: 8
-  xdescribe('Game progression', () => {
+  describe('Game progression', () => {
     it('should call endGame when a decision is found', () => {
       const endGameCallback = jest.fn();
       render(<TicBoard endGame={endGameCallback} />);

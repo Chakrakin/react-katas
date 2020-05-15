@@ -6,13 +6,13 @@ import { testClickButtonOrder } from './TicTestUtils';
 describe('TicGameMaster', () => {
 
   // suggested step: 5
-  xit('should have a welcome headline', () => {
+  it('should have a welcome headline', () => {
     render(<TicGameMaster />);
     screen.getByText('Welcome to the Tic Tac Toe Game');
   });
 
   // suggested step: 6
-  xdescribe('New Game', () => {
+  describe('New Game', () => {
     it('should has a "New Game" button', () => {
       render(<TicGameMaster />);
       screen.getByText('New Game');
@@ -29,7 +29,7 @@ describe('TicGameMaster', () => {
   });
 
   // suggested step: 9
-  xdescribe('Game ending', () => {
+  describe('Game ending', () => {
     beforeEach(() => {
       render(<TicGameMaster />);
       fireEvent.click(screen.getByText('New Game'));
